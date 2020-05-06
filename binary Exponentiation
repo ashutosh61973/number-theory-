@@ -1,0 +1,22 @@
+/////////////////////////////////////////////////////BINARY EXPONENTIATION\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+IT IS USED TO CALCULATE THE  POWER OF ANY TERM IN O(LOG(N)).
+APPROCH------------------>>>>
+LONG LONG INT BIN_POW(LONG LONG INT A,LONG LONG INT N)
+{
+        LONG LONG INT RES=1;
+        WHILE(N)
+        {
+                IF(N%2)
+                {
+                        RES=RES*A;
+                        N--;
+                }
+                ELSE
+                {
+                        A=A*A;
+                        N=N/2;
+                }
+        }
+        RETURN RES;
+}
+/////////////////////////////////////////////////////////____THANK____YOU___/////////////////////////////////////////////////////////////
