@@ -12,7 +12,7 @@ eculid algorithm---------------------->
                 gcd(b%a,a);
         }
  }
- extended euclids theoram---------->it is used to find out modulo multiplicative inverse of a number
+/////////////// extended euclids theoram---------->it is used to find out modulo multiplicative inverse of a number\\\\\\\\\\\\\\\\\\\\\\\
  LONG LONG INT X;
  LONG LONG INT Y;
  class modulu_inverse{
@@ -46,8 +46,36 @@ eculid algorithm---------------------->
  
  
  }
+///////////////////////////////////////////////////FER -MIT----------ALGO RITHM \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+FERMIT ALGORITHM IS USED TO FIND OUT THE MODULU MULTIPLICATIVE INVERSE :::::::::::::::::::::::::::::::::::::>>>>>>>>>
+CLASS FERMIT
+{
+
+        LONG LONG INT POWER(LONG LONG INT A,LONG LONG INT N,LONG LONG INT M)
+        {
+                LONG LONG INT RESULT=1;
+                IF(A%2==1)
+                {
+                     RESULT=RESULT*A;
+                     N--;
+                }
+                ELSE
+                {
+                        A=A*A;
+                        N=N/2;
+                }
+                return result;
+        }
+        LONG LONG INT FERMIT_MULTI_INV(LONG  LONG INT A,LONG LONG INT M)
+        {
+                return power(A,M-2 ,M);//IF M IS PRIME;
+        }
 
 
+
+
+
+}
 
 
 
