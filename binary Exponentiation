@@ -1,3 +1,63 @@
+eculid algorithm---------------------->
+)(for finding the gcd of a number)----------------->
+(it state that if we take modular of bigger number by smller number (lets say ->a and b such that a<b) then gcd remain unchanged and we also 
+ know that if one number is 0 then other will be the gretest common divisor)
+ .so
+ int gcd(long long int a,long long int b)
+ {
+        if(a=0)
+        return b;
+        else
+        {
+                gcd(b%a,a);
+        }
+ }
+ extended euclids theoram---------->it is used to find out modulo multiplicative inverse of a number
+ LONG LONG INT X;
+ LONG LONG INT Y;
+ class modulu_inverse{
+ VOID EET(LONG LONG INT A,LONG LONG INT M)
+ {
+        LONG LONG INT GCD;
+        IF(M==0)
+        {
+                GCD=A;     //AX+MY=1 OR (A%M)X+0Y=1
+                X=1;
+                Y=0;
+        }
+        ELSE
+        {
+                EET(M,A%M);
+                temp=x;
+                x=y;
+                y=temp-(a/m)x;
+        }
+        
+ }
+        long long int modulu_inv(a,m)
+        {
+                if(gcd(a,m)==1)
+                {
+                      EET(A,M);
+                      RETURN (X%M+M)%M;
+                }
+                RETURN -1;
+        }
+ 
+ 
+ }
+
+
+
+
+
+
+
+
+
+
+
+
 /////////////////////////////////////////////////////BINARY EXPONENTIATION\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 IT IS USED TO CALCULATE THE  POWER OF ANY TERM IN O(LOG(N)).
 APPROCH------------------>>>>
@@ -19,9 +79,26 @@ LONG LONG INT BIN_POW(LONG LONG INT A,LONG LONG INT N)
         }
         RETURN RES;
 }
-/////////////////////////////////////////////////////////____THANK____YOU___/////////////////////////////////////////////////////////////
-
-
+////////////////////////////////////////////////////MODULAR EXPONENTIATION/////////////////////////////////////////////////////////////
+FOR QWUESTION LIKE [A^(B)] %C
+long long int modular_exponentiation(long long int a,long long int b,long long int m)
+{
+        while(b>0)//while power of a i.e b is not to zero , looping continues
+        {
+                long long int result=1;
+                if(b%2==1)
+                {
+                        result=(result*a)%m;
+                        n--;
+                }
+                else
+                {       
+                        a=a*a%m;
+                        n=n/2;
+                }
+        }
+        return  result;
+}
 
 /////////////////////////////////////////////////////////modulu airthmatic\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 (a*b)%c==((a%c)(b%c))%c;________________
